@@ -5,15 +5,31 @@ app = Flask(__name__)
 
 @app.route("/calculator/greeting", methods=['GET'])
 def greeting():
-    return 'hello world'
+    return 'Hello World'
 
 @app.route("/calculator/add", methods=['POST'])
 def add():
-    return ''
+    data = request.get_json()
+    x = data['x']
+    y = data['y']
+    sum = x+y
+    ret = {
+            'Message': sum,
+            'Status Code': 200
+    }
+    return jsonify(ret)
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
-    return ''
+    data = request.get_json()
+    x = data['x']
+    y = data['y']
+    diff = x+y
+    ret = {
+            'Message': diff,
+            'Status Code': 200
+    }
+    return jsonify(ret)
 
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
