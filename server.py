@@ -14,7 +14,7 @@ def add():
     y = int(data['second'])
     sum = x+y
     ret = {
-            'Message': sum
+            'result': sum
     }
     return jsonify(ret)
 
@@ -25,7 +25,7 @@ def subtract():
     y = int(data['second'])
     diff = x-y
     ret = {
-            'Message': diff
+            'result': diff
     }
     return jsonify(ret)
 
