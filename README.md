@@ -86,3 +86,10 @@ In order to submit a solution, follow these steps.
 
 ###### Hint
 An actual solution is present in one of the commits. If you revert the commit with the message "Remove actual answers", you should be able to get to a working solution
+
+
+curl -v -H "Content-Type: application/json" -X POST \
+     -d '{"first":"10","second":"20"}' http://127.0.0.1:8080/calculator/add
+
+curl -v -H "Content-Type: application/json" -X POST \
+     -d '{"first":"10","second":"20"}' http://127.0.0.1:8080/calculator/subtract   
